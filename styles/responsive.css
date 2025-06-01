@@ -1,0 +1,15 @@
+@media screen and (width <= 1150px) {
+    .calculator{
+        width: 50%;
+    }
+}
+
+@media screen and (width <= 670px){
+    .calculator{
+        width: 90%;
+
+        .math-btn, .op-btn, .calc-btn{
+            padding: 1rem;
+        }
+    }
+}

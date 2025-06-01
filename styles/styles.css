@@ -1,0 +1,237 @@
+:root{
+    /* THEME 1 BY DEFAULT */
+    --main-back: hsl(222, 26%, 31%);
+    --toggle-back: hsl(223, 31%, 20%);
+    --screen-back: hsl(224, 36%, 15%);
+    --key-back: hsl(225, 21%, 49%);
+    --key-math-back-hover: hsl(0, 0%, 100%);
+    --key-op-back-hover: hsl(223, 40%, 63%);
+    --key-calc-back-hover: hsl(6, 90%, 60%);
+    --key-shadow: hsl(221, 9%, 35%);
+    --key-back-toggle: hsl(6, 63%, 50%);
+    --dark-key-shadow: hsl(6, 70%, 34%);
+    --light-key-back: hsl(30, 25%, 89%);
+    --grayish-key-shadow: hsl(28, 16%, 65%);
+    --dark-grayish-blue-text: hsl(221, 14%, 31%);
+    --white-text: hsl(0, 0%, 100%);
+    --screen-text: hsl(0, 0%, 100%)
+}
+
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0px;
+    background-color: var(--main-back);
+    font-family: "League Spartan";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    
+    .header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        .theme-txt{
+            color: var(--white-text);
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 10px;
+            margin-right: 1rem;
+        }
+    }
+    
+    .screen{
+        box-sizing: border-box;
+        padding: 0rem 1rem;
+        height: 80px;
+        width: 100%;
+        background-color: var(--screen-back);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .keypad{
+        background-color: var(--toggle-back);
+        max-width: 100%;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+}
+
+.result{
+    font-family: "League Spartan";
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--screen-text);
+    white-space: nowrap;
+    overflow: auto;
+    text-align: center;
+    text-orientation: upright;
+}
+
+.math-btn, .op-btn, .calc-btn{
+    font-family: "League Spartan";
+    font-weight: 600;
+    font-size: 30px;
+
+    color: var(--dark-grayish-blue-text);
+    background-color: var(--light-key-back);
+
+    box-shadow: inset 0px -3px 0px var(--grayish-key-shadow);
+
+    padding: 0.5rem 1rem;
+
+    border: none;
+    border-radius: 0.35rem;
+
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.op-btn{
+    font-size: 20px;
+    background-color: var(--key-back);
+    box-shadow: inset 0px -3px 0px var(--key-shadow);
+    color: white;
+}
+
+.calc-btn{
+    background-color: var(--key-back-toggle);
+    box-shadow: inset 0px -3px 0px var(--dark-key-shadow);
+    color: white;
+    font-size: 20px;
+}
+
+.op-btn, .calc-btn{
+    padding: 0.75rem 1rem;
+}
+
+.math-btn:hover{
+    background-color: var(--key-math-back-hover);
+}
+
+.op-btn:hover{
+    background-color: var(--key-op-back-hover);
+}
+
+.calc-btn:hover{
+    background-color: var(--key-calc-back-hover);
+}
+
+.title{
+    color: var(--white-text);
+    font-weight: 600;
+    font-size: 25px;
+    margin-right: auto;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.row > *{
+    width: 25%;
+}
+
+.row-two > *{
+    width: 50%;
+}
+
+.result::-webkit-scrollbar{
+    height: 5px;
+}
+
+.result::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+.result::-webkit-scrollbar-thumb{
+    background-color: rgba(101, 101, 101, 0.589);
+    border-radius: 1rem;
+}
+
+.theme-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    gap: 0.25rem;
+    position: relative;
+    
+    .headers{
+        font-size: 12px;
+        color: var(--white-text);
+        font-weight: 500;
+        width: 80%;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* padding: 0px 5px; */
+        position: absolute;
+        top: -15px;
+        left: 8px;
+        /* background-color: red; */
+    }
+    
+    .ops{        
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 15px;
+        background-color: var(--toggle-back)    ;
+    }
+
+    input[type="radio"]{
+        padding: 0px;
+        margin: 2px;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    input[type="radio"]::after{
+        content: "";
+        width: 16px;
+        height: 16px;
+        transform: scale(0);
+        border-radius: 50%;
+        background-color: transparent;
+        transition: .3s all ease;
+    }
+    
+    input[type="radio"]:checked::after{
+        background-color: var(--key-back-toggle);
+        transform: scale(1);
+    }
+}
