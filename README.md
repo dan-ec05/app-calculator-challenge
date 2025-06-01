@@ -22,8 +22,8 @@ Screenshot of my solution :)
 
 ### Links
 
-- Solution URL: [Solution URL]()
-- Live site URL: [Live site URL]()
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/calculator-app-solution-U77HmZoVY9)
+- Live site URL: [Live site URL](https://app-calculator-challenge.vercel.app/)
 
 ## My process
 
@@ -40,5 +40,5 @@ I learned to create a group of radio buttons to make it look like a slider with 
 
 ### Author
 
-- Frontend Mentor - [@dan_ec5]()
-- Github - [@dan_ec5]()
+- Frontend Mentor - [@dan-ec05](https://www.frontendmentor.io/profile/dan-ec05)
+- Github - [@dan-ec05](https://github.com/dan-ec05)
